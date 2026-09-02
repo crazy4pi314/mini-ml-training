@@ -1,0 +1,72 @@
+{
+  "name": "underfit",
+  "steps": [
+    0,
+    25,
+    50,
+    75,
+    100,
+    125,
+    150,
+    175,
+    200,
+    225,
+    250
+  ],
+  "train_loss": [
+    4.359124660491943,
+    3.9287368208169937,
+    3.752745434641838,
+    3.598784849047661,
+    3.4706029891967773,
+    3.3675171583890915,
+    3.3026322424411774,
+    3.2595152407884598,
+    3.2270608246326447,
+    3.2123667150735855,
+    3.198961839079857
+  ],
+  "val_loss": [
+    4.359420984983444,
+    3.9264007061719894,
+    3.7504692524671555,
+    3.5935972034931183,
+    3.4616706371307373,
+    3.364085376262665,
+    3.2995830476284027,
+    3.2519390136003494,
+    3.2267704755067825,
+    3.2069431096315384,
+    3.1942308247089386
+  ],
+  "samples": [
+    {
+      "step": 0,
+      "text": "\npPYcXB'qhXIr4Fj5u0lWFb?R66k0UHVMGevI3KgVN7FzJCPjjFxIPnK-(9;:b6]u''I;3\n)).4399SSGdaH;e6F\n8TMCGDi.S9zt2FDglzcv29S98!mm:\u000062lP8D\u0000,\"E.AGrrz2JACC:rJr'8N-uN!w0ssT:soqQPFDI)WFwThv\u0000kPJorr\"'o6\u0000RJ#f#I\u00002ou!\u00001FEu#"
+    },
+    {
+      "step": 250,
+      "text": "\nl rhhieuhVrrn, dudlfla honaldHe9letwld.d  ont  dr Kf nezo9 adrto  uel\nar.e atg rlakgewt trdCiyi.neatn dytzcaa9midlmaee6ilsr H,pd.is,edn rosrrdr aalul!r mll snce the0i wehvekPe rr hoadfsdw rVCoayep api"
+    }
+  ],
+  "meta": {
+    "steps": 250,
+    "batch_size": 12,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "seed": 1337,
+    "n_params": 160512,
+    "block_size": 96,
+    "train_tokens": 364082,
+    "val_tokens": 41453,
+    "vocab_size": 79,
+    "n_layer": 3,
+    "n_head": 4,
+    "n_embd": 64,
+    "dropout": 0.1,
+    "wall_seconds": 34.18,
+    "final_train_loss": 3.198961839079857,
+    "final_val_loss": 3.1942308247089386,
+    "diagnosis": "underfitting: both curves are still high and still falling"
+  }
+}

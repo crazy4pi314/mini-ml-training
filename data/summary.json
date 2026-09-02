@@ -1,0 +1,60 @@
+{
+  "source": "tinytales",
+  "raw_docs": 1862,
+  "clean_docs": 1400,
+  "cleaning_steps": [
+    {
+      "name": "normalise whitespace",
+      "why": "makes every later rule predictable",
+      "kept": 1862,
+      "removed": 0
+    },
+    {
+      "name": "drop broken characters",
+      "why": "mojibake wastes a tiny model's vocabulary",
+      "kept": 1730,
+      "removed": 132
+    },
+    {
+      "name": "drop boilerplate",
+      "why": "ads and legal footers are not language",
+      "kept": 1713,
+      "removed": 17
+    },
+    {
+      "name": "length filter",
+      "why": "too short teaches nothing, too long is usually spam",
+      "kept": 1652,
+      "removed": 61
+    },
+    {
+      "name": "exact dedup",
+      "why": "repeats push the model toward memorising",
+      "kept": 1481,
+      "removed": 171
+    },
+    {
+      "name": "near dedup",
+      "why": "the same text with a tweak is still a repeat",
+      "kept": 1400,
+      "removed": 81
+    },
+    {
+      "name": "TOTAL",
+      "why": "raw -> clean",
+      "kept": 1400,
+      "removed": 462
+    }
+  ],
+  "base_train_docs": 1260,
+  "base_val_docs": 140,
+  "base_train_chars": 361563,
+  "base_val_chars": 41174,
+  "recipes_train_docs": 425,
+  "recipes_val_docs": 75,
+  "tiny_train_docs": 6,
+  "tiny_train_chars": 1758,
+  "sft_train_pairs": 810,
+  "sft_val_pairs": 90,
+  "vocab_size": 79
+}

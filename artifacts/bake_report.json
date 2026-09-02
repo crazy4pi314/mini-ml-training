@@ -1,0 +1,8 @@
+{
+  "seconds_per_run": {
+    "overfit": 107.8
+  },
+  "total_seconds": 107.8,
+  "torch": "2.14.0+cpu",
+  "threads": 4
+}

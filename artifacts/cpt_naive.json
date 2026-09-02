@@ -1,0 +1,77 @@
+{
+  "name": "cpt_naive",
+  "steps": [
+    0,
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "train_loss": [
+    4.0797244012355804,
+    1.0410155095160007,
+    0.5917141437530518,
+    0.41026060096919537,
+    0.33322562649846077,
+    0.2798304930329323,
+    0.2511425940319896,
+    0.2423036303371191,
+    0.2369776926934719
+  ],
+  "val_loss": [
+    4.069820538163185,
+    1.0403270311653614,
+    0.5956255979835987,
+    0.41032105684280396,
+    0.3245933223515749,
+    0.2836219370365143,
+    0.24171288777142763,
+    0.23685616441071033,
+    0.22968205250799656
+  ],
+  "samples": [
+    {
+      "step": 400,
+      "text": "recipe: prf inuter the stlimme. notes: chopping the onion small makes the mash cook faster.\n\nrecipe: cheefur beas bake. leftovers kep in the fridge for 3 days. notes: do not let the duck fat smoke. notes: chopping the small mak"
+    },
+    {
+      "step": -1,
+      "text": "one day little basil. step 3: add the bean and cook until soft, about 5 minutes. step 3: add the bean and cooook until soft, about 3 minutes. step 7: r addd the squant and cooook until soft, about 7 minutes. step 3: pour in the "
+    }
+  ],
+  "meta": {
+    "steps": 400,
+    "batch_size": 12,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "seed": 1337,
+    "n_params": 160512,
+    "block_size": 96,
+    "train_tokens": 145245,
+    "val_tokens": 26244,
+    "vocab_size": 79,
+    "n_layer": 3,
+    "n_head": 4,
+    "n_embd": 64,
+    "dropout": 0.1,
+    "wall_seconds": 57.92,
+    "final_train_loss": 0.2369776926934719,
+    "final_val_loss": 0.22968205250799656,
+    "old_domain_val": [
+      0.5208039712160826,
+      2.395843341946602,
+      3.035428509116173,
+      3.373048409819603,
+      3.7036047726869583,
+      3.922943353652954,
+      3.9624156802892685,
+      4.2120755314826965,
+      4.1544730216264725
+    ],
+    "replay_fraction": 0.0
+  }
+}

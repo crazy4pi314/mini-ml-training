@@ -1,0 +1,81 @@
+{
+  "name": "healthy",
+  "steps": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000,
+    1100,
+    1200
+  ],
+  "train_loss": [
+    4.359124660491943,
+    2.2720674872398376,
+    2.087258070707321,
+    1.8083223402500153,
+    1.4397240206599236,
+    1.1634457930922508,
+    0.980792909860611,
+    0.820613119751215,
+    0.7087079025804996,
+    0.636289294809103,
+    0.5813767500221729,
+    0.55022675357759,
+    0.5139402952045202
+  ],
+  "val_loss": [
+    4.359420984983444,
+    2.2517168670892715,
+    2.092740997672081,
+    1.8015026599168777,
+    1.4352922588586807,
+    1.161030113697052,
+    0.9686474911868572,
+    0.8013964295387268,
+    0.6799373812973499,
+    0.6046191528439522,
+    0.5828241929411888,
+    0.5457438472658396,
+    0.5105467196553946
+  ],
+  "samples": [
+    {
+      "step": 0,
+      "text": "\npPYcXB'qhXIr4Fj5u0lWFb?R66k0UHVMGevI3KgVN7FzJCPjjFxIPnK-(9;:b6]u''I;3\n)).4399SSGdaH;e6F\n8TMCGDi.S9zt2FDglzcv29S98!mm:\u000062lP8D\u0000,\"E.AGrrz2JACC:rJr'8N-uN!w0ssT:soqQPFDI)WFwThv\u0000kPJorr\"'o6\u0000RJ#f#I\u00002ou!\u00001FEu#WNWYv:4t48zK8!?JrJ,("
+    },
+    {
+      "step": 600,
+      "text": "\nend tier an, bene lilant wafed the wheed son ay juno to me. the e smowalded the lassed mind ide. enen d, because knew what happpenered. the idin mind, go and because knew whold home. foun smila mand he lder towhalde smin"
+    },
+    {
+      "step": 1200,
+      "text": "\nleved nehog te week after that.\n\nevery morning went down to the small map. the slareed the silver coin.\n\nmila livedar walked the in whistle light went soft. one day id fot say a word, but it folllowed home. the tin whist"
+    }
+  ],
+  "meta": {
+    "steps": 1200,
+    "batch_size": 12,
+    "learning_rate": 0.003,
+    "weight_decay": 0.01,
+    "seed": 1337,
+    "n_params": 160512,
+    "block_size": 96,
+    "train_tokens": 364082,
+    "val_tokens": 41453,
+    "vocab_size": 79,
+    "n_layer": 3,
+    "n_head": 4,
+    "n_embd": 64,
+    "dropout": 0.1,
+    "wall_seconds": 96.03,
+    "final_train_loss": 0.5139402952045202,
+    "final_val_loss": 0.5105467196553946
+  }
+}

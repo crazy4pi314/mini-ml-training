@@ -1,0 +1,77 @@
+{
+  "name": "cpt_replay",
+  "steps": [
+    0,
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "train_loss": [
+    3.0297906398773193,
+    1.5290922448039055,
+    1.224758304655552,
+    1.0102734491229057,
+    0.9056280665099621,
+    0.831160418689251,
+    0.7945382781326771,
+    0.7833545990288258,
+    0.7746702507138252
+  ],
+  "val_loss": [
+    4.069820538163185,
+    1.827900491654873,
+    1.366201438009739,
+    1.0787895917892456,
+    0.9148448295891285,
+    0.8312395624816418,
+    0.7683270573616028,
+    0.750907402485609,
+    0.7421475611627102
+  ],
+  "samples": [
+    {
+      "step": 400,
+      "text": "recipe: pin inuter te dum foll. notes: let goes topin the fridgoe f 6 delet days. not slalses itep 7: the tn dut cand ide a a a sit. step 5: 2: our minutes 4: milas chiveong wit oooo mead.\n\nrecipe: oanes and othe ttowal hat ive"
+    },
+    {
+      "step": -1,
+      "text": "one day per bour with the livean walked pet in phe fridge for 5 days. totes: dayo l the lande gent sight ent stalt.\n\n\nredina sotler walde sopme tooked. chepppppppers cooooons of sily keeed idgec to for 5 days. leve the stas orsh"
+    }
+  ],
+  "meta": {
+    "steps": 400,
+    "batch_size": 12,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.01,
+    "seed": 1337,
+    "n_params": 160512,
+    "block_size": 96,
+    "train_tokens": 207627,
+    "val_tokens": 26244,
+    "vocab_size": 79,
+    "n_layer": 3,
+    "n_head": 4,
+    "n_embd": 64,
+    "dropout": 0.1,
+    "wall_seconds": 42.39,
+    "final_train_loss": 0.7746702507138252,
+    "final_val_loss": 0.7421475611627102,
+    "old_domain_val": [
+      0.5208039712160826,
+      0.8512936122715473,
+      0.8212304934859276,
+      0.8252525292336941,
+      0.8500217348337173,
+      0.8209772482514381,
+      0.809105921536684,
+      0.8213215731084347,
+      0.8238638117909431
+    ],
+    "replay_fraction": 0.3
+  }
+}
