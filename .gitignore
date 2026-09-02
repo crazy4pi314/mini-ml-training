@@ -37,6 +37,11 @@ Thumbs.db
 # The one exception is the optional ~1 MB tiny-shakespeare download.
 data/tinyshakespeare.txt
 
+# Output from training live in notebook 02. Named *_live so a live run can
+# never clobber the pre-baked checkpoints/artifacts the presenter relies on.
+checkpoints/*_live.pt
+artifacts/*_live.json
+
 # Scratch output from experiments.
 artifacts/scratch/
 checkpoints/scratch/
