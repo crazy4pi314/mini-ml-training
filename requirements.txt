@@ -1,0 +1,20 @@
+# CPU-only PyTorch.
+#
+# The `+cpu` build is what keeps a Codespace small and fast: the default PyPI
+# wheel drags in several gigabytes of CUDA libraries that we would never use.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.6.0+cpu ; sys_platform != "darwin"
+torch==2.6.0 ; sys_platform == "darwin"   # macOS wheels are already CPU/MPS only
+
+numpy>=1.26,<3
+matplotlib>=3.8,<4
+
+# Notebook runtime.
+jupyterlab>=4.1,<5
+ipykernel>=6.29,<7
+notebook>=7.1,<8
+
+# Used by `make test` / CI to execute every notebook headlessly.
+nbconvert>=7.16,<8
+nbclient>=0.10,<0.11

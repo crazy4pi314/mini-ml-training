@@ -1,0 +1,43 @@
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Virtual environments ----------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter -----------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.jupyter/
+.virtual_documents/
+
+# Notebooks are committed WITHOUT outputs so diffs stay readable.
+# (`scripts/clean_notebooks.py` strips them; run it before you commit.)
+
+# --- Editors / OS ------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Repo-specific -----------------------------------------------------------
+# Everything in data/, checkpoints/ and artifacts/ is small (a few MB in total)
+# and IS committed, so the pre-baked presenter path works straight after clone.
+# Regenerate any of it with:
+#     python scripts/prepare_data.py
+#     python scripts/pretrain_all.py
+#
+# The one exception is the optional ~1 MB tiny-shakespeare download.
+data/tinyshakespeare.txt
+
+# Scratch output from experiments.
+artifacts/scratch/
+checkpoints/scratch/
+*.log
