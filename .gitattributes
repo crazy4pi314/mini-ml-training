@@ -1,0 +1,49 @@
+# Line endings.
+#
+# Everything in this repo ultimately runs on Linux - a Codespace, a dev
+# container, or CI - so LF is the only correct ending in the repository and in
+# the working tree, including on Windows.
+#
+# This is not cosmetic. `.devcontainer/post-create.sh` is executed by bash, and
+# bash reads a CRLF file as if every line ended in a literal carriage return:
+#
+#     set -euo pipefail   ->   set: pipefail\r: invalid option name
+#
+# Forcing `eol=lf` here means a Windows checkout produces a script that bash can
+# actually run, so a locally built dev container behaves like a real Codespace.
+
+# Normalise every text file to LF in the repository *and* on checkout.
+* text=auto eol=lf
+
+# Be explicit about the files where this matters most.
+*.sh    text eol=lf
+*.py    text eol=lf
+*.ipynb text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.txt   text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+.gitignore     text eol=lf
+.gitattributes text eol=lf
+requirements.txt text eol=lf
+
+# Binary artifacts: never inspected, never converted, never diffed as text.
+# PyTorch checkpoints contain byte sequences that look like CRLF, and rewriting
+# them would silently corrupt the model weights.
+*.pt  binary
+*.pth binary
+*.bin binary
+*.npy binary
+*.npz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.gz  binary
+
+# Keep notebook diffs readable rather than one giant JSON line.
+*.ipynb diff
