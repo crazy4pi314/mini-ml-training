@@ -179,7 +179,7 @@ def save_history(history: History, path: str | Path | None = None) -> Path:
     """Write a run history to ``artifacts/<name>.json``."""
     path = Path(path) if path else ARTIFACTS / f"{history.name}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(history.to_dict(), indent=2), encoding="utf-8")
+    path.write_text(json.dumps(history.to_dict(), indent=2), encoding="utf-8", newline="\n")
     return path
 
 

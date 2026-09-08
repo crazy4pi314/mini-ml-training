@@ -32,7 +32,7 @@ def clean(path: Path) -> bool:
             changed = True
         cell.get("metadata", {}).pop("execution", None)
     if changed:
-        path.write_text(json.dumps(payload, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+        path.write_text(json.dumps(payload, indent=1, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     return changed
 
 

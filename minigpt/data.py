@@ -181,7 +181,7 @@ def fetch_tiny_shakespeare(timeout: float = 10.0) -> str | None:
     except Exception:
         return None
     cache.parent.mkdir(parents=True, exist_ok=True)
-    cache.write_text(text, encoding="utf-8")
+    cache.write_text(text, encoding="utf-8", newline="\n")
     return text
 
 
@@ -567,8 +567,8 @@ def save_splits(
         "train": directory / f"{name}_train.txt",
         "val": directory / f"{name}_val.txt",
     }
-    paths["train"].write_text(docs_to_text(train_docs), encoding="utf-8")
-    paths["val"].write_text(docs_to_text(val_docs), encoding="utf-8")
+    paths["train"].write_text(docs_to_text(train_docs), encoding="utf-8", newline="\n")
+    paths["val"].write_text(docs_to_text(val_docs), encoding="utf-8", newline="\n")
     return paths
 
 
@@ -589,6 +589,7 @@ def save_qa(pairs: Sequence[dict], name: str = "sft", directory: Path | None = N
     path.write_text(
         "\n".join(json.dumps(p, ensure_ascii=False) for p in pairs) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     return path
 
@@ -636,7 +637,7 @@ def prepare_all(source: str = "tinytales", seed: int = 0, verbose: bool = True) 
 
     # --- the deliberately tiny training set used for the overfit demo -------
     tiny = base_train[:TINY_TRAIN_DOCS]
-    (DATA / "tiny_train.txt").write_text(docs_to_text(tiny), encoding="utf-8")
+    (DATA / "tiny_train.txt").write_text(docs_to_text(tiny), encoding="utf-8", newline="\n")
 
     # --- instruction-tuning pairs ------------------------------------------
     pairs = qa_pairs()
@@ -673,7 +674,9 @@ def prepare_all(source: str = "tinytales", seed: int = 0, verbose: bool = True) 
         "sft_val_pairs": len(sft_val),
         "vocab_size": tokenizer.vocab_size,
     }
-    (DATA / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    (DATA / "summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8", newline="\n"
+    )
     if verbose:
         print(f"corpus source        : {source_name}")
         print(f"raw -> clean docs    : {len(messy)} -> {len(clean)}")

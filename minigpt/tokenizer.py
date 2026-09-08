@@ -83,7 +83,9 @@ class CharTokenizer:
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(
-            json.dumps({"chars": self.chars}, ensure_ascii=False), encoding="utf-8"
+            json.dumps({"chars": self.chars}, ensure_ascii=False),
+            encoding="utf-8",
+            newline="\n",
         )
         return path
 

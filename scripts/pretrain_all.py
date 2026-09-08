@@ -254,7 +254,9 @@ def main() -> None:
         "torch": torch.__version__,
         "threads": args.threads,
     }
-    (ARTIFACTS / "bake_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    (ARTIFACTS / "bake_report.json").write_text(
+        json.dumps(report, indent=2), encoding="utf-8", newline="\n"
+    )
     print(f"\nAll done in {report['total_seconds']}s")
     print(f"  checkpoints -> {CHECKPOINTS}")
     print(f"  histories   -> {ARTIFACTS}")
